@@ -1,5 +1,6 @@
 var start=false;
 var gwaleson=document.getElementsByClassName("J_grab_single")[0];
+alert(gwaleson);
 function StartAuto(){
   start=true;
 }
