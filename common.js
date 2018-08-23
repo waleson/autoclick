@@ -3,8 +3,14 @@ var start=false;
 var walesonc=0;
 var gwaleson=document.getElementsByClassName("pro-get-button-box")[0];
 var gClickBtn=document.getElementsByClassName("J_grab_single")[0];
+var walesonAddBtn=document.getElementById("waleson_auto_click");
 function StartAuto(){
-  start=true;
+  start=!start;
+  if(!start){
+     walesonAddBtn.innerHTML="已停止自动抢单";  
+  }else{
+     walesonAddBtn.innerHTML="已开启自动抢单";  
+  };
 }
 
 function CheckClick()
@@ -17,7 +23,7 @@ function CheckClick()
     s=mydate.getSeconds();
     timeok=(h>=10&&m>1&&m<=60);
     if(timeok){      
-      document.getElementById("waleson_auto_click").innerHTML="正在自动抢单"+walesonc+"次";
+      walesonAddBtn.innerHTML="正在自动抢单"+walesonc+"次";
       walesonc+=1;
       gClickBtn.click();
     }    
