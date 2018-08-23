@@ -6,6 +6,7 @@ var gClickBtn=document.getElementsByClassName("J_grab_single")[0];
 var walesonAddBtn=document.getElementById("waleson_auto_click");
 function StartAuto(){
   start=!start;
+  walesonAddBtn=document.getElementById("waleson_auto_click");
   if(!start){
      walesonAddBtn.innerHTML="已停止自动抢单";  
   }else{
