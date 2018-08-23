@@ -30,5 +30,5 @@ function AddBtn(){
 	gwaleson.appendChild(abtn);	
 }
 
-setInterval("CheckClick()",100);
+setInterval("CheckClick()",200);
 AddBtn();
