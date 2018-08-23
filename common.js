@@ -1,5 +1,5 @@
 var start=false;
-var gwaleson=document.getElementsByClassName("btn-disabled")[0];
+var gwaleson=document.getElementsByClassName("pro-get-button-box")[0];
 function StartAuto(){
   start=true;
 }
