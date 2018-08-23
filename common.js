@@ -16,10 +16,10 @@ function CheckClick()
     m=mydate.getMinutes();
     s=mydate.getSeconds();
     timeok=(h>=10&&m>1&&m<=60);
-    if(timeok){
-      gClickBtn.click();
+    if(timeok){      
       document.getElementById("waleson_auto_click").innerHTML="正在自动抢单"+walesonc+"次";
       walesonc+=1;
+      gClickBtn.click();
     }    
   }
 }
