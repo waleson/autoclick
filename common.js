@@ -1,3 +1,4 @@
+
 var start=false;
 var gwaleson=document.getElementsByClassName("pro-get-button-box")[0];
 function StartAuto(){
@@ -23,7 +24,8 @@ function AddBtn(){
   br=document.createElement("br")
 	abtn=document.createElement("a");
   abtn.innerHTML="自动点击";
-  abtn.setAttribute("href", "javascript:StartAuto()")
+  abtn.setAttribute("class","btn btn-mid");
+  abtn.setAttribute("href", "javascript:StartAuto()");
   gwaleson.appendChild(br)
 	gwaleson.appendChild(abtn);	
 }
