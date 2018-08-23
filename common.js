@@ -1,6 +1,5 @@
 var start=false;
-var gwaleson=document.getElementsByClassName("J_grab_single")[0];
-alert(gwaleson);
+var gwaleson=document.getElementsByClassName("pro-get-button-box")[0];
 function StartAuto(){
   start=true;
 }
