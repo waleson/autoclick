@@ -5,6 +5,8 @@ function StartAuto(){
   if(start=="true"){
     sessionStorage.setItem("ClickStart", "false");    
   }else{
+    ccc=prompt("请输入频率s","0.2");
+    sessionStorage.setItem("freq", ccc*1000); 
     sessionStorage.setItem("ClickStart", "true");    
   }
   walesonAddBtn=document.getElementById("waleson_auto_click");
@@ -12,7 +14,7 @@ function StartAuto(){
       if(start=="false"){
          walesonAddBtn.innerHTML="已停止自动抢单";  
       }else{
-         walesonAddBtn.innerHTML="已开启自动抢单";  
+         walesonAddBtn.innerHTML="已开启自动抢单"; 
       };
    };
    window.location.reload();
@@ -39,7 +41,7 @@ function CheckClick()
         walesonc+=1;
         gClickBtn.click();
        }else{
-        // window.location.reload();
+        window.location.reload();
        }
       }  
     }    
@@ -58,5 +60,7 @@ function AddBtn(){
   gwaleson.appendChild(abtn); 
 }
 
-setInterval("CheckClick()",200);
+var freq=sessionStorage.getItem("freq");
+if(freq==""){freq=200};
+setInterval("CheckClick()",freq);
 AddBtn();
