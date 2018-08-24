@@ -1,7 +1,7 @@
 var walesonc=0;
 var gwaleson=document.getElementsByClassName("pro-get-button-box")[0];
 var gClickBtn=document.getElementsByClassName("J_grab_single")[0];
-var walesonAddBtn=document.getElementById("waleson_auto_click");
+
 function StartAuto(){
   start=sessionStorage.getItem("ClickStart");
   if(start=="true"){
@@ -27,9 +27,8 @@ function CheckClick()
     m=mydate.getMinutes();
     s=mydate.getSeconds();
     timeok=(h>=9&&m>1&&m<=60);
-    if(timeok){   
-      window.location.reload();
-      walesonAddBtn.innerHTML="正在自动抢单"+walesonc+"次";
+    if(timeok){ 
+      document.getElementById("waleson_auto_click").innerHTML="正在自动抢单"+walesonc+"次";
       walesonc+=1;
       gClickBtn.click();
     }    
@@ -47,5 +46,13 @@ function AddBtn(){
   gwaleson.appendChild(abtn); 
 }
 
+function AutoRefresh(){
+   start=sessionStorage.getItem("ClickStart");
+   if(start=="true"){
+    window.location.reload();
+   };
+}
+
 setInterval("CheckClick()",200);
+setInterval("AutoRefresh()",600);
 AddBtn();
