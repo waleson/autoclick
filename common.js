@@ -1,4 +1,5 @@
- 
+
+
 var start=false;
 var walesonc=0;
 var gwaleson=document.getElementsByClassName("pro-get-button-box")[0];
@@ -23,7 +24,8 @@ function CheckClick()
     m=mydate.getMinutes();
     s=mydate.getSeconds();
     timeok=(h>=9&&m>1&&m<=60);
-    if(timeok){      
+    if(timeok){   
+      document.execCommand('Refresh');
       walesonAddBtn.innerHTML="正在自动抢单"+walesonc+"次";
       walesonc+=1;
       gClickBtn.click();
