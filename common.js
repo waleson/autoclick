@@ -39,7 +39,7 @@ function CheckClick()
         walesonc+=1;
         gClickBtn.click();
        }else{
-         window.location.reload();
+        // window.location.reload();
        }
       }  
     }    
