@@ -6,7 +6,7 @@ function ReloadData(){
  // window.location.reload();
   ProDet.getBasicInfo();
  // $(".my-tab li.J_pro_tab)").click();
-  document.execCommand('Refresh');
+ // document.execCommand('Refresh');
  // AddBtn();
 }
 
@@ -55,7 +55,8 @@ function CheckClick()
       gClickBtn=document.getElementsByClassName("J_grab_single")[0];
       if (gClickBtn==null){
         ReloadData();
-      }else{        
+      }else{   
+        
         wbtn=document.getElementById("waleson_auto_click");
         if (wbtn!=null){
           allcc+=100;
@@ -65,9 +66,9 @@ function CheckClick()
                 gClickBtn.click();
                 allcc=0;
           };
-
-       }else{
-        ReloadData();
+           window.location.reload();
+        }else{
+         window.location.reload();
        }
       }  
     }    
