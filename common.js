@@ -4,10 +4,10 @@ var allcc=0;
 
 function ReloadData(){
  // window.location.reload();
-  ProDet.getBasicInfo();
+ // ProDet.getBasicInfo();
  // $(".my-tab li.J_pro_tab)").click();
- // document.execCommand('Refresh');
-  AddBtn();
+  document.execCommand('Refresh');
+ // AddBtn();
 }
 
 function StartAuto(){
