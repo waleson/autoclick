@@ -62,6 +62,7 @@ function CheckClick()
         wbtn=document.getElementById("waleson_auto_click");
         if (wbtn!=null){
           allcc+=100;
+          freq=sessionStorage.getItem("freq");
           if (allcc>=freq){
                 wbtn.innerHTML="正在自动抢单"+walesonc+"次";
                 walesonc+=1;
