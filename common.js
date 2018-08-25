@@ -1,6 +1,11 @@
 var walesonc=0;
 var allcc=0;
 
+function ReloadData(){
+ // window.location.reload();
+  ProDet.getBasicInfo();
+}
+
 function StartAuto(){
   start=sessionStorage.getItem("ClickStart");
   if(start=="true"){
@@ -18,7 +23,7 @@ function StartAuto(){
          walesonAddBtn.innerHTML="已开启自动抢单"; 
       };
    };
-   window.location.reload();
+   ReloadData();
 }
 
 function CheckClick()
@@ -34,7 +39,7 @@ function CheckClick()
     if(timeok){       
       gClickBtn=document.getElementsByClassName("J_grab_single")[0];
       if (gClickBtn==null){
-        window.location.reload();
+        ReloadData();
       }else{        
         wbtn=document.getElementById("waleson_auto_click");
         if (wbtn!=null){
@@ -47,7 +52,7 @@ function CheckClick()
           };
 
        }else{
-        window.location.reload();
+        ReloadData();
        }
       }  
     }    
