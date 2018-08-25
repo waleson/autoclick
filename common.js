@@ -66,7 +66,7 @@ function CheckClick()
                 gClickBtn.click();
                 allcc=0;
           };
-           window.location.reload();
+          
         }else{
          window.location.reload();
        }
