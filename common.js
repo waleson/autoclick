@@ -3,7 +3,7 @@ var walesonc=0;
 var allcc=0;
 
 function ReloadData(){
- // window.location.reload();
+  window.location.reload();
  // ProDet.getBasicInfo();
  // $(".my-tab li.J_pro_tab)").click();
   document.execCommand('Refresh');
