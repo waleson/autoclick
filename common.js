@@ -86,7 +86,7 @@ function AddBtn(){
    abtn.setAttribute("id","waleson_auto_click");
    abtn.setAttribute("href", "javascript:StartAuto()");
 
-   gwaleson.appendChild(br)
+   //gwaleson.appendChild(br)
    gwaleson.appendChild(abtn); 
   }
 }
