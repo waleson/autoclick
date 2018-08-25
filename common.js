@@ -3,9 +3,9 @@ var allcc=0;
 
 function ReloadData(){
  // window.location.reload();
-  ProDet.getBasicInfo();
-  //$(".my-tab li.J_pro_tab:eq(0)").click();
-  document.execCommand('Refresh');
+ // ProDet.getBasicInfo();
+  $(".my-tab li.J_pro_tab:eq(0)").click();
+ // document.execCommand('Refresh');
 }
 
 function StartAuto(){
