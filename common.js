@@ -30,7 +30,7 @@ function CheckClick()
     h=mydate.getHours();
     m=mydate.getMinutes();
     s=mydate.getSeconds();
-    timeok=(h>=9&&m>1&&m<=60);
+    timeok=(h>=8&&m>1&&m<=60);
     if(timeok){       
       gClickBtn=document.getElementsByClassName("J_grab_single")[0];
       if (gClickBtn==null){
