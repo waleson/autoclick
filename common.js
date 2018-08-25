@@ -57,8 +57,7 @@ function CheckClick()
       gClickBtn=document.getElementsByClassName("J_grab_single")[0];
       if (gClickBtn==null){
         ReloadData();
-      }else{   
-        
+      }else{
         wbtn=document.getElementById("waleson_auto_click");
         if (wbtn!=null){
           allcc+=100;
