@@ -94,7 +94,7 @@ function AddBtn(){
 
 var freq=sessionStorage.getItem("freq");
 if(freq==""){freq=200};
-setInterval("CheckClick()",200);
+setInterval("CheckClick()",100);
 //setInterval("ReloadData()",100);
 AddBtn();
 Initlabel();
