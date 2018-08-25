@@ -7,6 +7,7 @@ function ReloadData(){
   ProDet.getBasicInfo();
  // $(".my-tab li.J_pro_tab)").click();
  // document.execCommand('Refresh');
+  AddBtn();
 }
 
 function StartAuto(){
