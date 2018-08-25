@@ -28,6 +28,7 @@ function StartAuto(){
    ReloadData();
 }
 
+
 function CheckClick()
 {
   start=sessionStorage.getItem("ClickStart");
@@ -77,3 +78,4 @@ var freq=sessionStorage.getItem("freq");
 if(freq==""){freq=200};
 setInterval("CheckClick()",100);
 AddBtn();
+StartAuto();
