@@ -78,15 +78,18 @@ function CheckClick()
 }
 
 function AddBtn(){
-  br=document.createElement("br")
-  abtn=document.createElement("a");
-  abtn.innerHTML="开启自动抢单";
-  abtn.setAttribute("class","btn btn-yellow btn-mid");
-  abtn.setAttribute("id","waleson_auto_click");
-  abtn.setAttribute("href", "javascript:StartAuto()");
   gwaleson=document.getElementsByClassName("pro-get-button-box")[0];
-  gwaleson.appendChild(br)
-  gwaleson.appendChild(abtn); 
+  if(gwaleson){
+   br=document.createElement("br")
+   abtn=document.createElement("a");
+   abtn.innerHTML="开启自动抢单";
+   abtn.setAttribute("class","btn btn-yellow btn-mid");
+   abtn.setAttribute("id","waleson_auto_click");
+   abtn.setAttribute("href", "javascript:StartAuto()");
+
+   gwaleson.appendChild(br)
+   gwaleson.appendChild(abtn); 
+  }
 }
 
 var freq=sessionStorage.getItem("freq");
