@@ -1,3 +1,4 @@
+
 var walesonc=0;
 var allcc=0;
 
@@ -10,19 +11,17 @@ function ReloadData(){
 
 function StartAuto(){
   start=sessionStorage.getItem("ClickStart");
-  if(start=="true"){
-    sessionStorage.setItem("ClickStart", "false");    
-  }else{
-    ccc=prompt("请输入频率s","0.2");
-    sessionStorage.setItem("freq", ccc*1000); 
-    sessionStorage.setItem("ClickStart", "true");    
-  }
   walesonAddBtn=document.getElementById("waleson_auto_click");
-  if(walesonAddBtn!=null){
-      if(start=="false"){
-         walesonAddBtn.innerHTML="已停止自动抢单";  
+  if(walesonAddBtn!=null){   
+      if(start=="true"){
+         sessionStorage.setItem("ClickStart", "false"); 
+         walesonAddBtn.innerHTML="已停止自动抢单";          
       }else{
+         ccc=prompt("请输入频率s","0.2");
+         sessionStorage.setItem("freq", ccc*1000); 
+         sessionStorage.setItem("ClickStart", "true");   
          walesonAddBtn.innerHTML="已开启自动抢单"; 
+         window.location.reload();
       };
    };
    ReloadData();
