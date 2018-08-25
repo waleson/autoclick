@@ -55,9 +55,7 @@ function CheckClick()
     timeok=(h>=8&&m>1&&m<=60);
     if(timeok){       
       gClickBtn=document.getElementsByClassName("J_grab_single")[0];
-      if (gClickBtn==null){
-        ReloadData();
-      }else{
+      if (gClickBtn!=null){
         wbtn=document.getElementById("waleson_auto_click");
         if (wbtn!=null){
           allcc+=100;
@@ -68,9 +66,11 @@ function CheckClick()
                 walesonc+=1;                
                 allcc=0;
           };          
-        }else{
+         }else{
          window.location.reload();
-       }
+        }        
+      }else{
+          ReloadData(); 
       }  
     }    
   }
