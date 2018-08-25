@@ -22,22 +22,24 @@ function Initlabel(){
    };
 }
 
-function StartAuto(){
-  start=sessionStorage.getItem("ClickStart");
+function StartAuto(){  
   walesonAddBtn=document.getElementById("waleson_auto_click");
   if(walesonAddBtn!=null){   
+      start=sessionStorage.getItem("ClickStart");
       if(start=="true"){
          sessionStorage.setItem("ClickStart", "false"); 
          walesonAddBtn.innerHTML="已停止自动抢单";          
       }else{
          ccc=prompt("请输入频率s","0.2");
+       if(ccc!=null){
          sessionStorage.setItem("freq", ccc*1000); 
          sessionStorage.setItem("ClickStart", "true");   
          walesonAddBtn.innerHTML="已开启自动抢单"; 
-         window.location.reload();
+        }
       };
-   };
-   ReloadData();
+   }else{
+    window.location.reload();   
+   }
 }
 
 
