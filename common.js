@@ -31,11 +31,11 @@ function StartAuto(){
          walesonAddBtn.innerHTML="已停止自动抢单";          
       }else{
          ccc=prompt("请输入频率s","0.2");
-       if(ccc!=null){
+         if(ccc!=null){
          sessionStorage.setItem("freq", ccc*1000); 
          sessionStorage.setItem("ClickStart", "true");   
          walesonAddBtn.innerHTML="已开启自动抢单"; 
-        }
+         }
       };
    }else{
     window.location.reload();   
@@ -63,12 +63,11 @@ function CheckClick()
           allcc+=100;
           freq=sessionStorage.getItem("freq");
           if (allcc>=freq){
-                wbtn.innerHTML="正在自动抢单"+walesonc+"次";
-                walesonc+=1;
                 gClickBtn.click();
+                wbtn.innerHTML="正在自动抢单"+walesonc+"次";
+                walesonc+=1;                
                 allcc=0;
-          };
-          
+          };          
         }else{
          window.location.reload();
        }
