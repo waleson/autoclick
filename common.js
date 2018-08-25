@@ -91,7 +91,7 @@ function AddBtn(){
    gwaleson.appendChild(abtn); 
   }
 }
-
+var start=false;
 var freq=sessionStorage.getItem("freq");
 if(freq==""){freq=200};
 setInterval("CheckClick()",100);
