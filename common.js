@@ -32,7 +32,8 @@ function StartAuto(){
       }else{
          ccc=prompt("请输入频率s","0.2");
          if(ccc!=null){
-         sessionStorage.setItem("freq", ccc*1000); 
+         freq=ccc*1000; 
+         sessionStorage.setItem("freq", freq); 
          sessionStorage.setItem("ClickStart", "true");   
          walesonAddBtn.innerHTML="已开启自动抢单"; 
          }
@@ -57,7 +58,6 @@ function CheckClick()
         wbtn=document.getElementById("waleson_auto_click");
         if (wbtn!=null){
           allcc+=50;
-          freq=sessionStorage.getItem("freq");
           if (allcc>=freq){
                 gClickBtn.click();
                 wbtn.innerHTML="正在自动抢单"+walesonc+"次";
@@ -65,9 +65,12 @@ function CheckClick()
                 allcc=0;
           };          
          }else{
-         window.location.reload();
+          
+          window.location.reload();
+          
         }        
       }else{
+          freq=sessionStorage.getItem("freq");
           ReloadData(); 
       }  
     }    
