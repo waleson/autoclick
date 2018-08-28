@@ -50,15 +50,13 @@ function CheckClick()
     mydate=new Date();
     timeok=false;
     h=mydate.getHours();
-    m=mydate.getMinutes();
-    s=mydate.getSeconds();
-    timeok=(h>=8&&m>1&&m<=60);
+    timeok=(h>=8);
     if(timeok){       
       gClickBtn=document.getElementsByClassName("J_grab_single")[0];
       if (gClickBtn!=null){
         wbtn=document.getElementById("waleson_auto_click");
         if (wbtn!=null){
-          allcc+=100;
+          allcc+=50;
           freq=sessionStorage.getItem("freq");
           if (allcc>=freq){
                 gClickBtn.click();
@@ -93,7 +91,7 @@ function AddBtn(){
 var start=false;
 var freq=sessionStorage.getItem("freq");
 if(freq==""){freq=200};
-setInterval("CheckClick()",100);
+setInterval("CheckClick()",50);
 //setInterval("ReloadData()",100);
 AddBtn();
 Initlabel();
