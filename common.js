@@ -2,14 +2,6 @@
 var walesonc=0;
 var allcc=0;
 
-function ReloadData(){
- // window.location.reload();
-  ProDet.getBasicInfo();
- // $(".my-tab li.J_pro_tab)").click();
- // document.execCommand('Refresh');
- // AddBtn();
-}
-
 function Initlabel(){
   start=sessionStorage.getItem("ClickStart");
   walesonAddBtn=document.getElementById("waleson_auto_click");
@@ -52,27 +44,23 @@ function CheckClick()
     timeok=false;
     h=mydate.getHours();
     timeok=(h>=8);
-    if(timeok){       
-      gClickBtn=document.getElementsByClassName("J_grab_single")[0];
-      if (gClickBtn!=null){
-        wbtn=document.getElementById("waleson_auto_click");
+    if(timeok){
         if (wbtn!=null){
           allcc+=50;
           if (allcc>=freq){
-                gClickBtn.click();
+               if($(.J_grab_single).hasClass("j-ishost")){
+                   grabSingle(ProDet.busId,"","",true);
+               }else{
+                   grabSingle(ProDet.busId);
+               }
                 wbtn.innerHTML="正在自动抢单"+walesonc+"次";
                 walesonc+=1;                
                 allcc=0;
           };          
-         }else{
-          
-          window.location.reload();
-          
-        }        
-      }else{
-          freq=sessionStorage.getItem("freq");
-          ReloadData(); 
-      }  
+         }else{          
+          window.location.reload();          
+        }       
+
     }    
   }
 }
