@@ -48,7 +48,7 @@ function CheckClick()
     if(timeok){
         wbtn=document.getElementById("waleson_auto_click");
         if (wbtn!=null){
-          allcc+=50;
+          allcc+=100;
           if (allcc>=freq){
                if($(".J_grab_single").hasClass("j-ishost")){
                    grabSingle(ProDet.busId,"","",true);
@@ -85,6 +85,6 @@ var start=false;
 var freq=200;
 freq=sessionStorage.getItem("freq");
 if(freq==""){freq=200};
-setInterval("CheckClick()",50);
+setInterval("CheckClick()",100);
 AddBtn();
 Initlabel();
