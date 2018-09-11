@@ -25,6 +25,7 @@ function StartAuto(){
          ccc=prompt("请输入频率s","0.2");
          if(ccc!=null){
          freq=ccc*1000; 
+         if (freq<50){freq=50};
          sessionStorage.setItem("freq", freq); 
          sessionStorage.setItem("ClickStart", "true");   
          walesonAddBtn.innerHTML="已开启自动抢单"; 
@@ -81,7 +82,8 @@ function AddBtn(){
   }
 }
 var start=false;
-var freq=sessionStorage.getItem("freq");
+var freq=200;
+freq=sessionStorage.getItem("freq");
 if(freq==""){freq=200};
 setInterval("CheckClick()",50);
 AddBtn();
