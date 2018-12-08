@@ -51,7 +51,8 @@ function CheckClick()
           allcc+=100;
           if (allcc>=freq){
                if($(".J_grab_single").hasClass("j-ishost")){
-                   grabSingle(ProDet.busId,"","",true);
+                    alert("hosttest")
+                   //grabSingle(ProDet.busId,"","",true);
                }else{
                    grabSingle(ProDet.busId);
                }
