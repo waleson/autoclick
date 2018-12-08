@@ -50,13 +50,14 @@ function CheckClick()
         if (wbtn!=null){
           allcc+=100;
           if (allcc>=freq){
-               if($(".J_grab_single").hasClass("j-ishost")){
-                    alert("hosttest")
-                   //grabSingle(ProDet.busId,"","",true);
+               if($(".J_grab_single").hasClass("j-ishost")){ 
+                   wbtn.innerHTML="主项目自动抢单"+walesonc+"次";
+                   grabSingle(ProDet.busId,"","",true);
                }else{
+                   wbtn.innerHTML="子项目自动抢单"+walesonc+"次";
                    grabSingle(ProDet.busId);
                }
-                wbtn.innerHTML="正在自动抢单"+walesonc+"次";
+                
                 walesonc+=1;                
                 allcc=0;
           };          
