@@ -1,8 +1,8 @@
 
 #AutoClick
 
-[Link](./Auto.crx)
+[Chrome Link](./Auto.crx)
 
 
-[Color](./color.js)
+[FireFox Link](./autoclick-1.0-fx.xpi)
 
