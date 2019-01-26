@@ -92,24 +92,13 @@ function AddBtn(){
   }
 }
 
-function sleep(delay) {
-  console.log("sleeping..");
-  var start = (new Date()).getTime();
-  while ((new Date()).getTime() - start < delay) {
-    continue;
-  }
-}
-
 var start=false;
 var freq=200;
 freq=sessionStorage.getItem("freq");
 if(freq==""){freq=200};
 setInterval("CheckClick()",100);
-window.onload=function(){
-  sleep(100);
-  AddBtn();
-  sleep(100);
-  Initlabel();
-}
+AddBtn();
+Initlabel();
+
 
 
