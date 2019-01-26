@@ -96,6 +96,7 @@ var freq=200;
 freq=sessionStorage.getItem("freq");
 if(freq==""){freq=200};
 setInterval("CheckClick()",100);
+sleep(500);
 AddBtn();
 Initlabel();
 
