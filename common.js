@@ -93,6 +93,7 @@ function AddBtn(){
 }
 
 function sleep(delay) {
+  console.log("sleeping..");
   var start = (new Date()).getTime();
   while ((new Date()).getTime() - start < delay) {
     continue;
@@ -104,8 +105,9 @@ var freq=200;
 freq=sessionStorage.getItem("freq");
 if(freq==""){freq=200};
 setInterval("CheckClick()",100);
-sleep(500);
+sleep(1000);
 AddBtn();
+sleep(200);
 Initlabel();
 
 
