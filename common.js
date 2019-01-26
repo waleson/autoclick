@@ -91,6 +91,14 @@ function AddBtn(){
     console.log("no pro-get-button-box");
   }
 }
+
+function sleep(delay) {
+  var start = (new Date()).getTime();
+  while ((new Date()).getTime() - start < delay) {
+    continue;
+  }
+}
+
 var start=false;
 var freq=200;
 freq=sessionStorage.getItem("freq");
