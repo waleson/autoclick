@@ -1,8 +1,10 @@
 
+console.log("commjs..starting.");
 var walesonc=0;
 var allcc=0;
 
 function Initlabel(){
+  console.log("Initlabel...");
   start=sessionStorage.getItem("ClickStart");
   walesonAddBtn=document.getElementById("waleson_auto_click");
   if(walesonAddBtn!=null){   
@@ -11,7 +13,9 @@ function Initlabel(){
       }else{
          walesonAddBtn.innerHTML="开始自动抢单"; 
       };
-   };
+   }else{
+    console.log("walesonAddBtn. is null..");
+   }
 }
 
 function StartAuto(){  
@@ -63,15 +67,17 @@ function CheckClick()
           };          
          }else{          
           window.location.reload();          
-        }       
+        }      
 
     }    
   }
 }
 
 function AddBtn(){
+  console.log("AddBtn...");
   gwaleson=document.getElementsByClassName("pro-get-button-box")[0];
   if(gwaleson){
+   console.log("createElement button..开启自动抢单.");
    br=document.createElement("br")
    abtn=document.createElement("a");
    abtn.innerHTML="开启自动抢单";
@@ -81,6 +87,8 @@ function AddBtn(){
 
    //gwaleson.appendChild(br)
    gwaleson.appendChild(abtn); 
+  }else{
+    console.log("no pro-get-button-box");
   }
 }
 var start=false;
@@ -90,3 +98,5 @@ if(freq==""){freq=200};
 setInterval("CheckClick()",100);
 AddBtn();
 Initlabel();
+
+
