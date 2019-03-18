@@ -92,6 +92,13 @@ function AddBtn(){
   }
 }
 
+var t = Date.now();
+ 
+function sleep(d){
+	while(Date.now - t <= d);
+} 
+sleep(500);
+
 var start=false;
 var freq=200;
 freq=sessionStorage.getItem("freq");
