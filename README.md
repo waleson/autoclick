@@ -4,5 +4,5 @@
 [Chrome Link](./Auto.crx)
 
 
-[FireFox 1.2 Link](./autoclick-1.2-fx.xpi)
+[FireFox 2.0 Link](./autoclick-2.0-fx.xpi)
 
